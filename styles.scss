@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  height: 100vh;
+  background: #f2ebe3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-display: swap;
+}
+
+.card_component {
+  max-width: 600px;
+  width: 92%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .image,
+  .text {
+    width: 50%;
+  }
+
+  .image {
+    object-position: center;
+    object-fit: cover;
+  }
+
+  .text {
+    padding: 32px;
+  }
+
+  .overline {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #6c7289;
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: #1c232b;
+    margin-bottom: 24px;
+  }
+
+  .product_description {
+    font-family: "Montserrat";
+    font-weight: 400;
+    line-height: 23px;
+    color: #6c7289;
+    margin-bottom: 30px;
+  }
+
+  .price_point {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    .current_price {
+      font-family: "Fraunces";
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 32px;
+      color: #3d8168;
+      margin-right: 20px;
+    }
+
+    .prev_price {
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 23px;
+      text-decoration-line: line-through;
+      color: #6c7289;
+    }
+  }
+
+  button.btn {
+    position: relative;
+    padding: 15px 62px;
+    background: #3d8168;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    transition: all 0.4s ease-in-out;
+
+    &::after {
+      position: absolute;
+      background: url(images/icon-cart.svg) center / 100% auto;
+      width: 14.39px;
+      height: 16px;
+      left: 0px;
+      top: 1px;
+    }
+
+    &:hover {
+      background: #1a4032;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 375px) {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    .image {
+      max-height: 240px;
+    }
+
+    .image,
+    .text {
+      width: 100%;
+    }
+
+    .text {
+      padding: 24px;
+
+      .overline {
+        margin-bottom: 12px;
+      }
+
+      .heading {
+        margin-bottom: 16px;
+      }
+
+      .product_description {
+        margin-bottom: 24px;
+      }
+
+      .price_point {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.attribution {
+  margin-top: 100px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
