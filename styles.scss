@@ -127,6 +127,10 @@ body {
       cursor: pointer;
     }
 
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
+
     @media screen and (max-width: 375px) {
       width: 100%;
     }
