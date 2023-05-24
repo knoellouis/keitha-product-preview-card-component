@@ -129,6 +129,9 @@ body {
 
     @media screen and (max-width: 768px) {
       width: auto;
+      &::after {
+        left: 35px;
+      }
     }
 
     @media screen and (max-width: 375px) {
