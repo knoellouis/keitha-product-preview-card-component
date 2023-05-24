@@ -126,17 +126,6 @@ body {
       background: #1a4032;
       cursor: pointer;
     }
-
-    @media screen and (max-width: 768px) {
-      width: auto;
-      &::after {
-        left: 35px;
-      }
-    }
-
-    @media screen and (max-width: 375px) {
-      width: 100%;
-    }
   }
 
   @media screen and (max-width: 768px) {
@@ -169,6 +158,19 @@ body {
       .price_point {
         margin-bottom: 20px;
       }
+    }
+
+    button.btn {
+      width: auto;
+      &::after {
+        left: 35px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    button.btn {
+      width: 100%;
     }
   }
 }
